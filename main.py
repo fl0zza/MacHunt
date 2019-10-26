@@ -1,31 +1,11 @@
 import pygame
 
-from random import randint
-from classes.Duck import Duck
-from classes.DuckFactory import DuckFactory
-from classes.Program import Program
+from classes import Program
 
 pygame.init()
 
 app = Program(1400, 900)
-
-ducks = []
-while len(ducks) < 3:
-    ducks.append(DuckFactory.generate())
-
-difficultyLevel = 1
-maxDifficultyLevel = 3
-
-playerStartLives = 3 - (difficultyLevel - 1)
-duckSpeedMultiplier = 1 * (difficultyLevel * 2)
-duckCountSimultaneousMax = 1 + (difficultyLevel - 1)
-baseHitPoints = 1
-
-playerScore = 0
-playerRemainingLives = playerStartLives
-
 app.run()
-
 
 # window = pygame.display.set_mode((windowWidth, windowHeight))
 # pygame.display.set_caption("Mac Hunt")
